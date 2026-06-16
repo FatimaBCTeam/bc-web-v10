@@ -8,10 +8,10 @@ const PHONE_DISPLAY = '+1 (226) 747-7679';
 const PHONE_TEL     = 'tel:+12267477679';
 const EMAIL         = 'bc@bcteam1.com';
 
-// ── Web3Forms keys ───────────────────────────────────
-const W3F_KEY_CONTACT  = '03a2b70c-6628-409d-9379-ba9129baec1d';
-const W3F_KEY_SCORECARD= '03a2b70c-6628-409d-9379-ba9129baec1d';
-const W3F_KEY_EXIT     = '03a2b70c-6628-409d-9379-ba9129baec1d';
+// ── Replace these keys before launch ─────────────────
+const W3F_KEY_CONTACT  = '03a2b70c-6628-409d-9379-ba9129baec1d';   // web3forms.com → bc@bcteam1.com
+const W3F_KEY_SCORECARD= '03a2b70c-6628-409d-9379-ba9129baec1d';  // same account, second form key
+const W3F_KEY_EXIT     = '03a2b70c-6628-409d-9379-ba9129baec1d';       // same account, third form key
 
 // ── Analytics IDs — fill in after account setup ──────
 const GA4_ID       = 'G-XXXXXXXXXX';   // Google Analytics 4
@@ -58,7 +58,7 @@ function renderNavbar(activePage) {
     <nav class="navbar" id="main-nav">
       <div class="navbar-inner">
         <a href="/index.html" class="navbar-logo">
-          <img src="/assets/logo-icon.png" alt="BC Team" width="40" height="40">
+          <img src="/assets/logo-icon.png" alt="BC Team" style="height:40px;width:auto;display:block;">
           <span>BC TEAM</span>
         </a>
         <ul class="nav-links">${linksHTML}</ul>
@@ -103,7 +103,7 @@ function renderFooter() {
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <img src="/assets/logo-icon.png" alt="BC Team" width="36" height="36">
+            <img src="/assets/logo-icon.png" alt="BC Team" style="height:36px;width:auto;display:block;">
             <span>BC TEAM</span>
           </div>
           <p>Helping mid-sized businesses implement, rescue, and optimize Microsoft Dynamics 365 Business Central — across Canada and the US.</p>
@@ -150,7 +150,7 @@ function renderFooter() {
       </div>
       <div class="footer-bottom">
         <p>© 2026 BC TEAM — 1000228250 Ontario Inc. All Rights Reserved. &nbsp;|&nbsp; <a href="/pages/privacy.html">Privacy Policy</a></p>
-        <p>Microsoft Certified Partner</p>
+        <p>Microsoft Certified Partner &nbsp;|&nbsp; Waterloo, ON Canada</p>
       </div>
     </footer>`;
 }
@@ -253,7 +253,7 @@ function renderFooter() {
     window.gtag = gtag;
   }
   // Microsoft Clarity
-  if (CLARITY_ID && CLARITY_ID !== 'XXXXXXXXXX') {
+  if (CLARITY_ID && CLARITY_ID !== 'x7l87wky7t') {
     (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
     t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;
     y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
